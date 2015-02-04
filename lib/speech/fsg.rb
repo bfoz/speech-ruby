@@ -20,6 +20,10 @@ module Speech
 	    @final = final
 	end
 
+	def ==(other)
+	    (start == other.start) and (final == other.final)
+	end
+
 	# @return [Array] all of the nodes in the grammar
 	def nodes(node=nil, set=nil)
 	    if node

@@ -10,6 +10,10 @@ module Speech
 		@transitions = options
 	    end
 
+	    def ==(other)
+		transitions == other.transitions
+	    end
+
 	    # @param key    [String]	the transition word to look up
 	    # @return [Node]	the destination {Node} for the given key, or nil if the key wasn't found
 	    def [](key)
